@@ -1,5 +1,8 @@
 #include <iostream>
+#include <string.h>
 #include "carro.h"
+
+using namespace std;
 
 Carro::Carro(string nome, string marca, string motorizacao, string cor, double valor) : nome(nome), marca(marca), motorizacao(motorizacao), cor(cor), valor(valor){
     
@@ -17,7 +20,7 @@ string Carro:: getMotorizacao(){
 string Carro:: getCor(){
     return cor;
 }
-string Carro:: getValor(){
+double Carro:: getValor(){
     return valor;
 }
 

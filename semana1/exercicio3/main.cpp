@@ -2,6 +2,8 @@
 #include "carro.h"
 #include <string>
 
+using namespace std;
+
 void preencherCarro(Carro& carro, string nome, string marca, string motorizacao, string cor, double valor){
     carro.preencher(nome, marca, motorizacao, cor, valor);
 }
