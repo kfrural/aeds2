@@ -23,7 +23,7 @@ class Carro{
         void setValor(double valor);
         
         void imprimir();
-        void preencher();
+        void preencher(string nome, string marca, string motorizacao, string cor, double valor);
         Carro copiar();
 };
 
