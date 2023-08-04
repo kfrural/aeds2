@@ -1,24 +1,24 @@
-#include <string.h>
+#include <string>
 
-
+using namespace std;
 
 class Livro{
     private:
-        std::string titulo;
-        std::string autor;
-        std::string editora;
+        string titulo;
+        string autor;
+        string editora;//atributos
         int numPaginas;
 
     public:
-    Livro(std::string titulo, std::string autor, std::string editora, int numPaginas);
+    Livro(string titulo, string autor, string editora, int numPaginas);// construtor
 
-        std::string getTitulo();
-        std::string getAutor();
-        std::string getEditora();
+        string getTitulo();//metodo get pega o valor
+        string getAutor();
+        string getEditora();
         int getNumPaginas();
 
-        void setTitulo(std::string titulo);
-        void setAutor(std::string autor);
-        void setEditora(sdt::string editora);
+        void setTitulo(string titulo);
+        void setAutor(string autor);
+        void setEditora(string editora);//metodo set moifica o vaor
         void setNumPaginas(int numPaginas);
 };
