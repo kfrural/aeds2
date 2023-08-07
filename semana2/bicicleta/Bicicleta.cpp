@@ -43,7 +43,7 @@ void Bicicleta::fill(){
     cin >> this->preco;
 }
 void Bicicleta::print(){
-    cout << "\n\n\nNomezin da TVzinha\n\n";
+    cout << "\n\n\nImpressao dos dados\n\n";
     cout << "Marca: " << this->marca;
     cout << "\nModelo: " << this->modelo;
     cout << "\nTamanho do Quadro: " << this->tamQuadro;
