@@ -43,7 +43,7 @@ void AnimalEstimacao::fill(){
     cin >> this->peso;
 }
 void AnimalEstimacao::print(){
-    cout << "\n\n\nNomezin da TVzinha\n\n";
+    cout << "\n\n\nImpressao dos dados\n\n";
     cout << "Especie: " << this->especie;
     cout << "\nRaca: " << this->raca;
     cout << "\nIdade: " << this->idade;
