@@ -43,7 +43,7 @@ void Casa::fill(){
     cin >> this->preco;
 }
 void Casa::print(){
-    cout << "\n\n\nNomezin da TVzinha\n\n";
+    cout << "\n\n\nImpressao dos dados\n\n";
     cout << "Endereco: " << this->endereco;
     cout << "\nArea: " << this->area;
     cout << "\nNumero de quartos: " << this->numQuartos;
