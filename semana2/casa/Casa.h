@@ -12,6 +12,7 @@ class Casa{
 
     public:
     Casa();// construtor
+    Casa(Casa &outra);
 
         string getEndereco();//metodo get pega o valor
         double getArea();
@@ -25,5 +26,6 @@ class Casa{
         
         void print();
         void fill();
+        void copiar(Casa &outra);
         
 };
