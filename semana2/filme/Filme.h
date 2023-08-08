@@ -12,6 +12,7 @@ class Filme{
 
     public:
     Filme();// construtor
+    Filme(Filme &outra);
 
         string getTitulo();//metodo get pega o valor
         string getDiretor();
@@ -25,5 +26,6 @@ class Filme{
         
         void print();
         void fill();
+        void copiar(Filme &outra);
         
 };
