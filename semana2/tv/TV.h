@@ -12,6 +12,7 @@ class TV{
 
     public:
     TV();
+    TV(TV &outra);
     TV(string marca, double tamanho, string resolucao, double preco);// construtor
 
         string getMarca();//metodo get pega o valor
@@ -26,5 +27,6 @@ class TV{
         
         void print();
         void fill();
+        void copiar(TV &outra);
         
 };
