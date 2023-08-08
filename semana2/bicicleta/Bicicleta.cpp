@@ -4,6 +4,12 @@
 Bicicleta::Bicicleta(){
     
 }
+Bicicleta::Bicicleta(Bicicleta &outra){
+    this->marca = outra.getMarca();
+    this->modelo = outra.getModelo();
+    this->tamQuadro = outra.getTamQuadro();
+    this->preco = outra.getPreco();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string Bicicleta::getMarca(){
     return marca;
@@ -49,7 +55,12 @@ void Bicicleta::print(){
     cout << "\nTamanho do Quadro: " << this->tamQuadro;
     cout << "\nPreco: " << this->preco;
 }
-
+void Bicicleta::copiar(Bicicleta &outra){
+    this->marca = outra.getMarca();
+    this->modelo = outra.getModelo();
+    this->tamQuadro = outra.getTamQuadro();
+    this->preco = outra.getPreco();
+}
 
 
 
