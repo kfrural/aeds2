@@ -4,6 +4,12 @@
 TV::TV(){
     
 }
+TV::TV(TV &outra){
+    this->marca = outra.getMarca();
+    this->tamanho = outra.getTamanho();
+    this->resolucao = outra.getResolucao();
+    this->preco = outra.getPreco();
+}
 
 TV::TV(string marca, double tamanho, string resolucao, double preco){
     this->marca = marca;
@@ -56,4 +62,9 @@ void TV::print(){
     cout << "\nResolucao: " << this->resolucao;
     cout << "\nPreco: " << this->preco;
 }
-
+void TV::copiar(TV &outra){
+    this->marca = outra.getMarca();
+    this->tamanho = outra.getTamanho();
+    this->resolucao = outra.getResolucao();
+    this->preco = outra.getPreco();
+}
