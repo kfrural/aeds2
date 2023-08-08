@@ -4,6 +4,12 @@
 Filme::Filme(){
     
 }
+Filme::Filme(Filme &outra){
+    this->titulo = outra.getTitulo();
+    this->diretor = outra.getDiretor();
+    this->duracao = outra.getDuracao();
+    this->preco = outra.getPreco();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string Filme::getTitulo(){
     return titulo;
@@ -48,6 +54,12 @@ void Filme::print(){
     cout << "\nDiretor: " << this->diretor;
     cout << "\nDuracao: " << this->duracao;
     cout << "\nPreco: " << this->preco;
+}
+void Filme::copiar(Filmme &outra){
+    this->titulo = outra.getTitulo();
+    this->diretor = outra.getDiretor();
+    this->duracao = outra.getDuracao();
+    this->preco = outra.getPreco();
 }
 
 
