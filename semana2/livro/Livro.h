@@ -11,6 +11,7 @@ class Livro{
         int numPaginas;
 
     public:
+    Livro(Livro &outra);
     Livro();// construtor
 
         string getTitulo();//metodo get pega o valor
@@ -25,5 +26,6 @@ class Livro{
         
         void print();
         void fill();
+        void copiar(Livro &outra);
         
 };
