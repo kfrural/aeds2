@@ -12,6 +12,7 @@ class Musica{
 
     public:
     Musica();// construtor
+    Musica(Musica &outra);
 
         string getTitulo();//metodo get pega o valor
         string getArtista();
@@ -25,5 +26,6 @@ class Musica{
         
         void print();
         void fill();
+        void copiar(Musica &outra);
         
 };
