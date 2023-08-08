@@ -12,6 +12,7 @@ class Bicicleta{
 
     public:
     Bicicleta();// construtor
+    Bicicleta(Bicicleta &outra);
 
         string getMarca();//metodo get pega o valor
         string getModelo();
@@ -25,5 +26,6 @@ class Bicicleta{
         
         void print();
         void fill();
+        void copiar(Bicicleta &outra);
         
 };
