@@ -4,6 +4,12 @@
 Casa::Casa(){
     
 }
+Casa::Casa(Casa &outra){
+    this->endereco = outra.getEndereco();
+    this->area = outra.getArea();
+    this->numQuartos = outra.getNumQuartos();
+    this->preco = outra.getPreco();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string Casa::getEndereco(){
     return endereco;
@@ -48,4 +54,10 @@ void Casa::print(){
     cout << "\nArea: " << this->area;
     cout << "\nNumero de quartos: " << this->numQuartos;
     cout << "\nPreco: " << this->preco;
+}
+void Casa::copiar(Casa &outra){
+    this->endereco = outra.getEndereco();
+    this->area = outra.getArea();
+    this->numQuartos = outra.getNumQuartos();
+    this->preco = outra.getPreco();
 }
