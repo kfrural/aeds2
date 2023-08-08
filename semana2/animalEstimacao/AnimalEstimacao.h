@@ -12,6 +12,7 @@ class AnimalEstimacao{
 
     public:
     AnimalEstimacao();// construtor
+    AnimalEstimacao(AnimalEstimacao &outra);
 
         string getEspecie();//metodo get pega o valor
         string getRaca();
@@ -25,5 +26,6 @@ class AnimalEstimacao{
         
         void print();
         void fill();
+        void copiar(AnimalEstimacao &outra);
         
 };
