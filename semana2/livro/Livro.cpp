@@ -4,6 +4,12 @@
 Livro::Livro(){
     
 }
+Livro::Livro(Livro &outra){
+    this->titulo = outra.getTitulo();
+    this->autor = outra.getAutor();
+    this->editora = outra.getEditora();
+    this->numPaginas = outra.getNumPaginas();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string Livro::getTitulo(){
     return titulo;
@@ -48,4 +54,11 @@ void Livro::print(){
     cout << "\nAutor: " << this->autor;
     cout << "\nEditora: " << this->editora;
     cout << "\nNumero de paginas: " << this->numPaginas;
+}
+
+void Livro::copiar(Livro &outra){
+    this->titulo = outra.getTitulo();
+    this->autor = outra.getAutor();
+    this->editora = outra.getEditora();
+    this->numPaginas = outra.getNumPaginas();
 }
