@@ -4,6 +4,12 @@
 Musica::Musica(){
     
 }
+Musica::Musica(Musica &outra){
+    this->titulo = outra.getTitulo();
+    this->artista = outra.getArtista();
+    this->duracao = outra.getDuracao();
+    this->preco = outra.getPreco();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string Musica::getTitulo(){
     return titulo;
@@ -49,7 +55,12 @@ void Musica::print(){
     cout << "\nDuracao: " << this->duracao;
     cout << "\nPreco: " << this->preco;
 }
-
+void Musica::copiar(Musica &outra){
+    this->titulo = outra.getTitulo();
+    this->artista = outra.getArtista();
+    this->duracao = outra.getDuracao();
+    this->preco = outra.getPreco();
+}
 
 
 
