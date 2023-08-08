@@ -4,6 +4,12 @@
 AnimalEstimacao::AnimalEstimacao(){
     
 }
+AnimalEstimacao::AnimalEstimacao(AnimalEstimacao &outra){
+    this->especie = outra.getEspecie();
+    this->raca = outra.getRaca();
+    this->idade = outra.getIdade();
+    this->peso = outra.getPeso();
+}
 //declara o construtor e depois do :: inicializa o trem com o valor correspondente
 string AnimalEstimacao::getEspecie(){
     return especie;
@@ -49,7 +55,12 @@ void AnimalEstimacao::print(){
     cout << "\nIdade: " << this->idade;
     cout << "\nPeso: " << this->peso;
 }
-
+void AnimalEstimacao::copiar(AnimalEstimacao &outra){
+    this->especie = outra.getEspecie();
+    this->raca = outra.getRaca();
+    this->idade = outra.getIdade();
+    this->peso = outra.getPeso();
+}
 
 
 
