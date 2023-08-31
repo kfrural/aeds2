@@ -3,6 +3,7 @@
 
 #include "Livro.h"
 
+
 class ListaContigua {
 private:
     int tam, quant;
@@ -32,9 +33,9 @@ public:
     
     void imprimir();
     void preencher();    
-    int buscar(int idLivro);    
-    Livro* buscar(double preco);
-    int buscaBinaria(int codigoProcurado);
+    string buscar(string isbnLivro);    
+    Livro* buscarLivro(string isbn);
+    int buscaBinaria(string isbn);
     
     //GETTERS E SETTERS
     void setLista(Livro* lista);

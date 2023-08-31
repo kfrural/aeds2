@@ -3,100 +3,100 @@
 using namespace std;
 
 Livro::Livro() {
-    id = -1;
-    nome = "";
-    preco = -1;
-    custo = -1;
-    estoque = -1;    
+    isbn = "";
+    titulo = "";
+    autor = "";
+    editora = "";
+    edicao = -1;    
 }
 
 Livro::Livro( Livro& outro){
-    id = outro.getId();
-    nome = outro.getNome();
-    preco = outro.getPreco();
-    custo = outro.getCusto();
-    estoque = outro.getEstoque();
+    isbn = outro.getIsbn();
+    titulo = outro.getTitulo();
+    autor = outro.getAutor();
+    editora = outro.getEditora();
+    edicao = outro.getEdicao();
 }
 
 void Livro::preencher(){
     cout << "--- Informe o Livro ---\n";
-    cout << "id:";
-    cin >> id;
-    cout << "Nome:";
-    cin >> nome;    
-    cout << "Custo:";
-    cin >> custo;
-    cout << "Preco:";
-    cin >> preco;
-    cout <<"Estoque:";
-    cin >> estoque;         
+    cout << "Isbn:";
+    cin >> isbn;
+    cout << "Titulo:";
+    cin >> titulo;    
+    cout << "Editora:";
+    cin >> editora;
+    cout << "Autor:";
+    cin >> autor;
+    cout <<"Edicao:";
+    cin >> edicao;         
     cout << "--------------------------\n";
 }
 
 void Livro::imprimir() {
     cout << "----- Livro -----\n";
-    cout << "Id:"<< id << endl;
-    cout << "Nome:" << nome << endl;
-    cout << "Custo:" << custo << endl;
-    cout << "Preco:" << preco << endl;
-    cout << "Estoque:" << estoque << endl;
+    cout << "Isbn:"<< isbn << endl;
+    cout << "Titulo:" << titulo << endl;
+    cout << "Editora:" << editora << endl;
+    cout << "Autor:" << autor << endl;
+    cout << "Edicao:" << edicao << endl;
     cout << "--------------------\n";
 }
 
 void Livro::imprimirReduzido() {
-    cout << "{"<< id << ", " 
-            << nome << ", "
-            << custo << ", "
-            << preco << ", "
-            << estoque << "}, ";
+    cout << "{"<< isbn << ", " 
+            << titulo << ", "
+            << editora << ", "
+            << autor << ", "
+            << edicao << "}, ";
 }
 
 void Livro::copiar( Livro &outro){
-    id = outro.getId();
-    nome = outro.getNome();
-    preco = outro.getPreco();
-    custo = outro.getCusto();
-    estoque = outro.getEstoque();
+    isbn = outro.getIsbn();
+    titulo = outro.getTitulo();
+    autor = outro.getAutor();
+    editora = outro.getEditora();
+    edicao = outro.getEdicao();
 }
 
-void Livro::setEstoque(int estoque) {
-    this->estoque = estoque;
+void Livro::setEdicao(int edicao) {
+    this->edicao = edicao;
 }
 
-int Livro::getEstoque()  {
-    return estoque;
+int Livro::getEdicao()  {
+    return edicao;
 }
 
-void Livro::setCusto(double custo) {
-    this->custo = custo;
+void Livro::setEditora(string editora) {
+    this->editora = editora;
 }
 
-double Livro::getCusto()  {
-    return custo;
+string Livro::getEditora()  {
+    return editora;
 }
 
-void Livro::setPreco(double preco) {
-    this->preco = preco;
+void Livro::setAutor(string autor) {
+    this->autor = autor;
 }
 
-double Livro::getPreco()  {
-    return preco;
+string Livro::getAutor()  {
+    return autor;
 }
 
-void Livro::setId(int id) {
-    this->id = id;
+void Livro::setIsbn(string isbn) {
+    this->isbn = isbn;
 }
 
-int Livro::getId()  {
-    return id;
+string Livro::getIsbn()  {
+    return isbn;
 }
 
-void Livro::setNome(string nome) {
-    this->nome = nome;
+void Livro::setTitulo(string titulo) {
+    this->titulo = titulo;
 }
 
-string Livro::getNome()  {
-    return nome;
+string Livro::getTitulo()  {
+    return titulo;
 }
 
 

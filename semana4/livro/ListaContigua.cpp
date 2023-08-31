@@ -33,21 +33,21 @@ ListaContigua::ListaContigua( ListaContigua& outra, int novoTamanho) {
         lista[i].copiar(outra.getLista()[i]);
     }    
 }
-
+/*
 ListaContigua::~ListaContigua() {
     //será chamado quando o objeto for destruido
 }
-
+*/
 /**
  * 
- * @param idLivro: identificador no Livro
+ * @param isbnLivro: identificador no Livro
  * @return retorna a posição(index) do Livro no vetor. Se nao encotrar
  * retorna -1
  */
-int ListaContigua::buscar(int idLivro) {
+int ListaContigua::buscar(string isbnLivro) {
     contadorDeComparacoes = 0;
     for (int i = 0; i <= tam - 1; i++) {
-        if (lista[i].getId() == idLivro){            
+        if (lista[i].getId() == isbnLivro){            
             return i;
         }else
             contadorDeComparacoes++;
@@ -56,14 +56,14 @@ int ListaContigua::buscar(int idLivro) {
     return -1;
 }
 
-/* Procura na lista de Livros todos os elementos que possuem o preco procurado.
+/* Procura na lista de Livros todos os elementos que possuem o isbn procurado.
 A função retorna um vetor de Livros, pois pode encontrar mais de um elemento.
 */
-Livro* ListaContigua::buscar(double preco) {
+Livro* ListaContigua::buscar(string isbn) {
     Livro* resultado = new Livro[tam];
     int cont = 0;
     for (int i = 0; i <= tam - 1; i++) {
-        if (lista[i].getPreco() == preco) {
+        if (lista[i].getIsbn() == isbn) {
             //resultado[i] = lista[i], como não pode, usamos o metodo copiar da classe Livro
             resultado[cont].copiar(lista[i]);
             cont++;
@@ -75,7 +75,7 @@ Livro* ListaContigua::buscar(double preco) {
 /*
  Lembrando que, pare este método funcionar é necessário que a lista esteja ordenada.
  */
-int ListaContigua::buscaBinaria(int codigoProcurado) {
+int ListaContigua::buscaBinaria(string isbn) {
     contadorDeComparacoes = 0;
     int inicio = 0;
     int fim = tam - 1;
@@ -84,9 +84,9 @@ int ListaContigua::buscaBinaria(int codigoProcurado) {
         meio = (inicio + fim) / 2;
         contadorDeComparacoes++;
         
-        if (lista[meio].getId() == codigoProcurado)
+        if (lista[meio].getIsbn() == isbn)
             return meio;
-        else if (codigoProcurado < lista[meio].getId()) {
+        else if (isbn < lista[meio].getIsbn()) {
             fim = meio - 1;
         } else {
             inicio = meio + 1;
@@ -175,7 +175,7 @@ void ListaContigua::shiftEnd(int ate) {
         }
     }
 }
-
+/*
 void ListaContigua::criaListaComLivrosAleatorios(int tam) {
     quant = 0;
     this->tam = tam;
@@ -183,10 +183,10 @@ void ListaContigua::criaListaComLivrosAleatorios(int tam) {
     
     for(int i=tam-1; i>=0; i--){
         Livro p;
-        p.setId(i);
+        p.setIsbn(i);
         insert(p);
     }
-}
+}*/
 
 void ListaContigua::imprimir() {
     cout << "\n Lista [ ";
