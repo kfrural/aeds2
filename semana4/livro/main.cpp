@@ -12,6 +12,7 @@ void menuOpcoes() {
     cout << "\t\t 3 - Remover(1) "          << endl;
     cout << "\t\t 4 - Remover(posicao)    " << endl;
     cout << "\t\t 5 - Buscar por isbn do livrinho  " << endl;
+    cout << "\t\t 6 - Buscar por isbn do livrinho(binario)  " << endl;
     cout << "\t\t S - Sair "                << endl;
     cout << "\t\t--------------------------------"<< endl;
     cout << "\t\tEscolhar uma opcao:";
@@ -44,16 +45,28 @@ int main() {
                 cin >> pos;
                 l.remove(pos);
                 break;
-            case '5':
-                int id = -1;
-                cout << "Informe o id do produto procurado:";
-                cin >> id;
-                int index = l.buscar(id);
-                if(index != -1){
-                    cout << "Produto encontrado na posicao ["<<index<<"]"<<endl;                    
-                }
+            case '6':
+                int isbnBin = -1;
+                cout << "Informe o isbn do livrinho procurado:";
+                cin >> isbnBin;
+                int indexBin = l.buscaBinaria(isbnBin);
+                if(indexBin != -1)
+                    cout << "Livrinho encontrado na posicao ["<<indexBin<<"]"<<endl;                    
+                
                     
                 break;
+          /*  case '5':
+                int isbn = -1;
+                cout << "Informe o isbn do livrinho procurado:";
+                cin >> isbn;
+                int index = l.buscar(isbn);
+                if(index != -1)
+                    cout << "Livrinho encontrado na posicao ["<<index<<"]"<<endl;                    
+                
+                    // TA COMENTADA PQ ESE TREM N QUER FUNCIONAR, IGUAL O ERRO DA SUA LA
+                    // PRA VER DESCOMENTA ESSA E COMENTA A CASE 6
+                break;*/
+            
         }
         l.imprimir();
     } while (opcao != 's' && opcao!='S');
