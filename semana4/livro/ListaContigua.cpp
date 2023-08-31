@@ -33,21 +33,21 @@ ListaContigua::ListaContigua( ListaContigua& outra, int novoTamanho) {
         lista[i].copiar(outra.getLista()[i]);
     }    
 }
-/*
+
 ListaContigua::~ListaContigua() {
-    //será chamado quando o objeto for destruido
+    
 }
-*/
+
 /**
  * 
  * @param isbnLivro: identificador no Livro
  * @return retorna a posição(index) do Livro no vetor. Se nao encotrar
  * retorna -1
  */
-int ListaContigua::buscar(string isbnLivro) {
+int ListaContigua::buscar(int isbnLivro) {
     contadorDeComparacoes = 0;
     for (int i = 0; i <= tam - 1; i++) {
-        if (lista[i].getId() == isbnLivro){            
+        if (lista[i].getIsbn() == isbnLivro){            
             return i;
         }else
             contadorDeComparacoes++;
@@ -59,23 +59,12 @@ int ListaContigua::buscar(string isbnLivro) {
 /* Procura na lista de Livros todos os elementos que possuem o isbn procurado.
 A função retorna um vetor de Livros, pois pode encontrar mais de um elemento.
 */
-Livro* ListaContigua::buscar(string isbn) {
-    Livro* resultado = new Livro[tam];
-    int cont = 0;
-    for (int i = 0; i <= tam - 1; i++) {
-        if (lista[i].getIsbn() == isbn) {
-            //resultado[i] = lista[i], como não pode, usamos o metodo copiar da classe Livro
-            resultado[cont].copiar(lista[i]);
-            cont++;
-        }
-    }
-    return resultado;
-}
+
 
 /*
  Lembrando que, pare este método funcionar é necessário que a lista esteja ordenada.
  */
-int ListaContigua::buscaBinaria(string isbn) {
+int ListaContigua::buscaBinaria(int isbn) {
     contadorDeComparacoes = 0;
     int inicio = 0;
     int fim = tam - 1;
@@ -228,9 +217,6 @@ bool ListaContigua::isEmpty() {
 /**
  *  GETTERS E SETTERS 
  */
-void ListaContigua::setLista(Livro* lista) {
-    this->lista = lista;
-}
 
 Livro* ListaContigua::getLista()  {
     return lista;

@@ -11,7 +11,7 @@ void menuOpcoes() {
     cout << "\t\t 2 - Inserir(posicao)  "   << endl;
     cout << "\t\t 3 - Remover(1) "          << endl;
     cout << "\t\t 4 - Remover(posicao)    " << endl;
-    cout << "\t\t 5 - Buscar por id do produto  " << endl;
+    cout << "\t\t 5 - Buscar por isbn do livrinho  " << endl;
     cout << "\t\t S - Sair "                << endl;
     cout << "\t\t--------------------------------"<< endl;
     cout << "\t\tEscolhar uma opcao:";

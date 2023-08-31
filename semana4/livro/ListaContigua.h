@@ -33,12 +33,11 @@ public:
     
     void imprimir();
     void preencher();    
-    string buscar(string isbnLivro);    
-    Livro* buscarLivro(string isbn);
-    int buscaBinaria(string isbn);
+    int buscar(int isbnLivro);   
+    int buscaBinaria(int isbn);
     
     //GETTERS E SETTERS
-    void setLista(Livro* lista);
+  
     Livro* getLista() ;
     void setQuant(int quant);
     int getQuant() ;

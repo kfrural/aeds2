@@ -3,7 +3,7 @@
 using namespace std;
 
 Livro::Livro() {
-    isbn = "";
+    isbn = -1;
     titulo = "";
     autor = "";
     editora = "";
@@ -83,11 +83,11 @@ string Livro::getAutor()  {
     return autor;
 }
 
-void Livro::setIsbn(string isbn) {
+void Livro::setIsbn(int isbn) {
     this->isbn = isbn;
 }
 
-string Livro::getIsbn()  {
+int Livro::getIsbn()  {
     return isbn;
 }
 

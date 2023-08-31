@@ -7,7 +7,7 @@ using namespace std;
 
 class Livro {
 private:
-    string isbn;
+    int isbn;
     string titulo;
     string autor;
     string editora;
@@ -30,10 +30,10 @@ public:
     string getEditora() ;
     void setAutor(string autor);
     string getAutor() ;
-    void setIsbn(string isbn);
-    string getIsbn() ;
-    void setNome(string nome);
-    string getNome() ;
+    void setIsbn(int isbn);
+    int getIsbn() ;
+    void setTitulo(string titulo);
+    string getTitulo() ;
     
  
 
