@@ -4,6 +4,10 @@ DuplamenteEncadeada::DuplamenteEncadeada(){
     quant = 0;
     head = NULL;
 }
+DuplamenteEncadeada::~DuplamenteEncadeada() {
+    //será chamado quando o objeto for destruido
+}
+
 
 void DuplamenteEncadeada::setQuant(int quant){
     this-> quant = quant;
@@ -123,8 +127,8 @@ void DuplamenteEncadeada::remover(int posicao){
         cout << "Operacao invalida\n";
     }
 }
-/*
-void DuplamenteEncadeada::buscar(int idProduto){
+
+Nodo *DuplamenteEncadeada::buscar(int idProduto){
     for(Nodo* p = head; p != NULL; p = p->getProx()){
         if(p->getItem().getId() == idProduto)
             return p;
@@ -143,4 +147,4 @@ Nodo *Nodo::getElemento(int n){
         return p;
     else
         return NULL;
-}*/
+}

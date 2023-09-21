@@ -8,6 +8,7 @@ class DuplamenteEncadeada{
         
     public:
         DuplamenteEncadeada();
+        virtual ~DuplamenteEncadeada();
         
         void setQuant(int quant);
         int getQuant();

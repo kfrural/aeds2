@@ -10,13 +10,14 @@ class Nodo{
         Nodo();
         Nodo(Produto &p);
         Nodo(const Nodo &outro);
+        virtual ~Nodo();
 
         
         void setItem(Produto item);
         void setAnt(Nodo* ant);
         void setProx(Nodo* prox);
         
-        Produto getItem() const;
+        const Produto& getItem() const;
         Nodo* getAnt() const;
         Nodo* getProx() const;
 };

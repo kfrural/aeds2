@@ -15,7 +15,10 @@ Nodo::Nodo(const Nodo &outro){
     prox = outro.getProx();
 }
 
-void Nodo::setItem(Produto &p){
+Nodo::~Nodo() {
+}
+
+void Nodo::setItem(Produto item){
     this-> item = item;
 }
 void Nodo::setAnt(Nodo* ant){
@@ -26,7 +29,7 @@ void Nodo::setProx(Nodo* prox){
     
 }
 
-Produto Nodo::getItem()const {
+const Produto& Nodo::getItem()const {
     return item;
 }
 Nodo *Nodo::getAnt()const {

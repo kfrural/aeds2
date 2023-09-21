@@ -13,7 +13,7 @@ class Produto{
 
     public:
         Produto();
-        Produto(Produto &outro);
+        Produto(const Produto &outro);
         
         void setId(int id);
         void setNome(string nome);
@@ -21,14 +21,14 @@ class Produto{
         void setPreco(double preco);
         void setEstoque(int estoque);
         
-        int getId();
-        string getNome();
-        double getCusto();
-        double getPreco();
-        int getEstoque();
+        int getId() const;
+        string getNome() const;
+        double getCusto() const;
+        double getPreco() const;
+        int getEstoque() const;
         
         void copiar(const Produto &outro);
         void preencher();
-        void imprimir();
-        void imprimirLista();
+        void imprimir() const;
+        void imprimirLista() const;
 };

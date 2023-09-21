@@ -7,7 +7,7 @@ Produto::Produto(){
     preco = -1;
     estoque = -1;
 }
-Produto::Produto(Produto &outro){
+Produto::Produto(const Produto &outro){
     id = outro.getId();
     nome = outro.getNome();
     custo = outro.getCusto();
@@ -31,24 +31,24 @@ void Produto:: setEstoque(int estoque){
     this-> estoque = estoque;
 }
 
-int Produto::getId(){
+int Produto::getId() const{
     return id;
 }
-string Produto::getNome(){
+string Produto::getNome() const{
     return nome;
 }
-double Produto::getCusto(){
+double Produto::getCusto() const{
     return custo;
 }
-double Produto::getPreco(){
+double Produto::getPreco() const{
     return preco;
 }
-int Produto::getEstoque(){
+int Produto::getEstoque() const{
     return estoque;
 }
 
 
-Produto::copiar(const Produto &outro){
+void Produto::copiar(const Produto &outro){
     id = outro.getId();
     nome = outro.getNome();
     custo = outro.getCusto();
@@ -71,7 +71,7 @@ void Produto::preencher(){
     cout << "\n\n";
 }
 
-void Produto::imprimir(){
+void Produto::imprimir() const{
     cout << "Informacoes do produto\n\n";
     cout << "ID: " << id;
     cout <<"\nNome: " << nome;
@@ -81,6 +81,6 @@ void Produto::imprimir(){
     cout << "\n\n";
 }
 
-void produto::imprimirLista(){
+void Produto::imprimirLista() const{
     cout <<"{ " << id << "-" << nome << "-" << custo << "-" << preco << "-" << estoque << " }\n\n";
 }
