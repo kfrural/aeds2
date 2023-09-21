@@ -48,7 +48,7 @@ int Produto::getEstoque(){
 }
 
 
-Produto::copiar(Produto &outro){
+Produto::copiar(const Produto &outro){
     id = outro.getId();
     nome = outro.getNome();
     custo = outro.getCusto();

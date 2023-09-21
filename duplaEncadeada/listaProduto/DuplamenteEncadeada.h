@@ -1,11 +1,10 @@
-#include "Nodo"
-#include "Produto.h"
+#include "Nodo.h"
 
 class DuplamenteEncadeada{
     private:
         int quant;
         Nodo* head;
-        bool isEmpty()
+        bool isEmpty();
         
     public:
         DuplamenteEncadeada();
@@ -19,6 +18,6 @@ class DuplamenteEncadeada{
         void insert(int posicao);
         void remover();
         void remover(int posicao);
-        Nodo* buscar(int idProduto);
-        Nodo* getElemento(int posicao);
+        Nodo *buscar(int idProduto);
+        Nodo *getElemento(int posicao);
 };

@@ -27,7 +27,7 @@ class Produto{
         double getPreco();
         int getEstoque();
         
-        void copiar(Produto &outro);
+        void copiar(const Produto &outro);
         void preencher();
         void imprimir();
         void imprimirLista();

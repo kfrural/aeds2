@@ -9,7 +9,7 @@ Nodo::Nodo(Produto &p){
     ant = NULL;
     prox = NULL;
 }
-Nodo::Nodo(Nodo &outro){
+Nodo::Nodo(const Nodo &outro){
     item.copiar(outro.getItem());
     ant = outro.getAnt();
     prox = outro.getProx();
@@ -23,14 +23,17 @@ void Nodo::setAnt(Nodo* ant){
 }
 void Nodo::setProx(Nodo* prox){
     this-> prox = prox;
+    
 }
 
-Produto Nodo::getItem(){
+Produto Nodo::getItem()const {
     return item;
 }
-Nodo* Nodo::getAnt(){
+Nodo *Nodo::getAnt()const {
     return ant;
 }
-Nodo* Nodo::getProx(){
+Nodo *Nodo::getProx() const{
     return prox;
 }
+
+

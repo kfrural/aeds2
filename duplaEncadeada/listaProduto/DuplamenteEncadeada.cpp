@@ -1,5 +1,4 @@
 #include "DuplamenteEncadeada.h"
-#include "Nodo.h"
 
 DuplamenteEncadeada::DuplamenteEncadeada(){
     quant = 0;
@@ -26,7 +25,7 @@ void DuplamenteEncadeada::preencher(){
         cout << "Quantidade de elementos: ";
         cin >> q;
     }while(q < 0);
-    for(int i = 0; i < = q-1; i++){
+    for(int i = 0; i <= q-1; i++){
         this->insert();
     }
 }
@@ -87,7 +86,7 @@ void DuplamenteEncadeada::insert(int n){
 }
 
 void DuplamenteEncadeada::remover(){
-    if(qunt > 0){
+    if(quant > 0){
         if(quant == 1){
             head = head->getProx();
         }else{
@@ -124,7 +123,7 @@ void DuplamenteEncadeada::remover(int posicao){
         cout << "Operacao invalida\n";
     }
 }
-
+/*
 void DuplamenteEncadeada::buscar(int idProduto){
     for(Nodo* p = head; p != NULL; p = p->getProx()){
         if(p->getItem().getId() == idProduto)
@@ -133,8 +132,8 @@ void DuplamenteEncadeada::buscar(int idProduto){
     return NULL;
 }
 
-Nodo* Nodo::getElemento(int n){
-    Nodo* p = head;
+Nodo *Nodo::getElemento(int n){
+    Nodo *p = head;
     int i = 1;
     while(i <= n -1 && p->getProx() != NULL){
         p = p->getProx();
@@ -144,4 +143,4 @@ Nodo* Nodo::getElemento(int n){
         return p;
     else
         return NULL;
-}
+}*/

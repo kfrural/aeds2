@@ -9,13 +9,14 @@ class Nodo{
     public:
         Nodo();
         Nodo(Produto &p);
-        Nodo(Nodo &outro);
+        Nodo(const Nodo &outro);
+
         
         void setItem(Produto item);
         void setAnt(Nodo* ant);
         void setProx(Nodo* prox);
         
-        Produto getItem();
-        Nodo* getAnt();
-        Nodo* getProx();
+        Produto getItem() const;
+        Nodo* getAnt() const;
+        Nodo* getProx() const;
 };
