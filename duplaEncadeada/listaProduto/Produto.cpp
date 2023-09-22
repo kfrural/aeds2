@@ -82,5 +82,5 @@ void Produto::imprimir() const{
 }
 
 void Produto::imprimirLista() const{
-    cout <<"{ " << id << "-" << nome << "-" << custo << "-" << preco << "-" << estoque << " }\n\n";
+    cout <<"{ " << id << "-" << nome << "-" << custo << "-" << preco << "-" << estoque << " } - ";
 }

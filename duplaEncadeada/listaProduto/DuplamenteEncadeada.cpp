@@ -127,6 +127,23 @@ void DuplamenteEncadeada::remover(int posicao){
         cout << "Operacao invalida\n";
     }
 }
+void DuplamenteEncadeada::removerDois(int posicao) {
+    if (posicao >= 1 && posicao <= quant) {
+        if (posicao + 1 <= quant) {
+            remover(posicao);
+            remover(posicao);
+            cout << "Os dois elementos foram removidos com sucesso\n";
+            quant -= 2; 
+        } else {
+            remover(posicao);
+            cout << "Nao ha elemento apartir do desejado, portanto foi removido apenas 1\n";
+            quant--;
+        }
+    } else {
+        cout << "Operacao invalida\n";
+    }
+}
+
 
 Nodo *DuplamenteEncadeada::buscar(int idProduto){
     for(Nodo* p = head; p != NULL; p = p->getProx()){

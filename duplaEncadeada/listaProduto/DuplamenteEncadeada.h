@@ -19,6 +19,7 @@ class DuplamenteEncadeada{
         void insert(int posicao);
         void remover();
         void remover(int posicao);
+        void removerDois(int posicao);
         Nodo *buscar(int idProduto);
         Nodo *getElemento(int posicao);
 };
