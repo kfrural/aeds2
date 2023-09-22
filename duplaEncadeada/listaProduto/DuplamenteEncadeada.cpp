@@ -136,7 +136,7 @@ Nodo *DuplamenteEncadeada::buscar(int idProduto){
     return NULL;
 }
 
-Nodo *Nodo::getElemento(int n){
+Nodo *DuplamenteEncadeada::getElemento(int n){
     Nodo *p = head;
     int i = 1;
     while(i <= n -1 && p->getProx() != NULL){
