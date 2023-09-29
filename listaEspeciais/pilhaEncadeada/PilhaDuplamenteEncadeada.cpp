@@ -12,19 +12,19 @@ int PilhaDuplamenteEncadeada:: getQuant(){
     return quant;
 }
 
-PilhaDuplamenteEncadeada:: imprimir(){
+void PilhaDuplamenteEncadeada:: imprimir(){
     cout << "\tListinha[";
-    if(isEmpty()){
+    if(!isEmpty()){
         Nodo* p = head;
         while(p != NULL){
-            p->getItem().imprimirResumido();
+            p->getItem().imprimirLista();
             p = p->getProx();
         }
-        cout << "]\n";
     }
+    cout << "]\n\n\n";
 }
 
-PilhaDuplamenteEncadeada:: preencher(){
+ void PilhaDuplamenteEncadeada:: preencher(){
     int q = 0;
     do{
         cout << "Quanidade de elementos: ";
@@ -35,7 +35,7 @@ PilhaDuplamenteEncadeada:: preencher(){
     }
 }
 
-PilhaDuplamenteEncadeada:: insert(){
+void PilhaDuplamenteEncadeada:: insert(){
     Produto p;
     p.preencher();
     Nodo* novo = new Nodo(p);
@@ -49,6 +49,31 @@ PilhaDuplamenteEncadeada:: insert(){
     quant++;
 }
 
-PilhaDuplamenteEncadeada:: remove(){
-    if
+void PilhaDuplamenteEncadeada:: remove(){
+    if(quant > 0){
+        if(quant == 1){
+            head = head-> getProx();
+        }else{
+            head = head->getProx();
+            head->setAnt(NULL);
+        }
+        quant--;
+    }else{
+        cout << "listinha vazia\n";
+    }
+}
+
+bool PilhaDuplamenteEncadeada:: isEmpty(){
+    return quant == 0 ? true : false;
+}
+
+Nodo* PilhaDuplamenteEncadeada:: getElemento(int posicao){
+    Nodo* p = head;
+    int j = 1;
+
+    while(j <= posicao-1 && p->getProx() != NULL){
+        p = p->getProx();
+        j++;
+    }
+    return (j == posicao) ? p : NULL;
 }
