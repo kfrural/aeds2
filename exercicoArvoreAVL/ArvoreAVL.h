@@ -48,6 +48,8 @@ public:
     Nodo* getQ(Nodo *P);
     void rotacaoUnica_EsqEsq(Nodo *P, Nodo* Q);
     void rotacaoUnica_DirDir(Nodo *P, Nodo* Q);
+    void duplaRotacaoPosNeg(Nodo *P, Nodo *Q);
+    void duplaRotacaoNegPos(Nodo *P, Nodo *Q);
     
     void loadProdutos();
     void saveProdutosArquivo();
