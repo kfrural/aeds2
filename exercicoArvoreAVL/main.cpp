@@ -14,6 +14,8 @@ void menuOpcoes() {
     cout << "\t\t3 - Inserir balanceando " << endl << endl;
     cout << "\t\t-------------------------------  " << endl;
     cout << "\t\ti - Imprimir (em-ordem)" << endl;
+    cout << "\t\tj - Imprimir (pre-ordem)" << endl;
+    cout << "\t\tk - Imprimir (pos-ordem)" << endl;
     cout << "\t\ts - Salvar " << endl;
     cout << "\t\tq - Quit " << endl;
     cout << "\t\t-------------------------------  " << endl;
@@ -65,6 +67,20 @@ int main() {
             {
                 cout << endl << endl << "*** Percurso na arvore ***" << endl;
                 tree.emOrdem(tree.getRoot());
+                cout << endl << "*** Percurso feito." << endl << endl;
+                break;
+            }
+            case 'j':
+            {
+                cout << endl << endl << "*** Percurso na arvore ***" << endl;
+                tree.preOrdem(tree.getRoot());
+                cout << endl << "*** Percurso feito." << endl << endl;
+                break;
+            }
+            case 'k':
+            {
+                cout << endl << endl << "*** Percurso na arvore ***" << endl;
+                tree.posOrdem(tree.getRoot());
                 cout << endl << "*** Percurso feito." << endl << endl;
                 break;
             }

@@ -254,18 +254,18 @@ void ArvoreAVL::executaBalanceamento(Nodo* entrou) {
 
 void ArvoreAVL::duplaRotacaoPosNeg(Nodo *P, Nodo* Q){
     Nodo *paiP = P->getPai();
-    Nodo *A = Q->getEsq();
-    Nodo *B = A->getDir();
+    Nodo *FilhoEsqQ = Q->getEsq();
+    Nodo *FilhoDir = FilhoEsqQ->getDir();
 
-    A->setDir(P);
-    P->setEsq(B);
+    FilhoEsqQ->setDir(P);
+    P->setEsq(FilhoDir);
 
-    Q->setEsq(A);
-    A->setPai(Q);
-    if(B != NULL){
-        B->setPai(A);
+    Q->setEsq(FilhoEsqQ);
+    FilhoEsqQ->setPai(Q);
+    if(FilhoDir!= NULL){
+        FilhoDir->setPai(FilhoEsqQ);
     }
-    P->setPai(A);
+    P->setPai(FilhoEsqQ);
     Q->setPai(paiP);
     if(Q->getItem().getId() > paiP->getItem().getId()){
         paiP->setDir(Q);
@@ -276,18 +276,18 @@ void ArvoreAVL::duplaRotacaoPosNeg(Nodo *P, Nodo* Q){
 
 void ArvoreAVL::duplaRotacaoNegPos(Nodo *P, Nodo* Q){
     Nodo *paiP = P->getPai();
-    Nodo *A = Q->getDir();
-    Nodo *B = A->getEsq();
+    Nodo *FilhoDirQ = Q->getDir();
+    Nodo *FilhoEsq = FilhoDirQ->getEsq();
 
-    A->setEsq(P);
-    P->setDir(B);
+    FilhoDirQ->setEsq(P);
+    P->setDir(FilhoEsq);
 
-    Q->setDir(A);
-    A->setPai(Q);
-    if(B != NULL){
-        B->setPai(P);
+    Q->setDir(FilhoDirQ);
+    FilhoDirQ->setPai(Q);
+    if(FilhoEsq != NULL){
+        FilhoEsq->setPai(P);
     }
-    P->setPai(A);
+    P->setPai(FilhoDirQ);
     Q->setPai(paiP);
     if(Q->getItem().getId() > paiP->getItem().getId()){
         paiP->setDir(Q);
