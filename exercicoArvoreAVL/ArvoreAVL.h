@@ -46,10 +46,11 @@ public:
     void executaBalanceamento(Nodo* entrou);
     Nodo* getP(Nodo *);
     Nodo* getQ(Nodo *P);
+    Nodo* getR(Nodo *Q);
     void rotacaoUnica_EsqEsq(Nodo *P, Nodo* Q);
     void rotacaoUnica_DirDir(Nodo *P, Nodo* Q);
-    void duplaRotacaoPosNeg(Nodo *P, Nodo *Q);
-    void duplaRotacaoNegPos(Nodo *P, Nodo *Q);
+    void duplaRotacaoDirEsq(Nodo *P, Nodo *Q, Nodo *R);
+    void duplaRotacaoEsqDir(Nodo *P, Nodo *Q, Nodo *R);
     
 
     void loadProdutos();

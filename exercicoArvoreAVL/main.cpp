@@ -55,9 +55,6 @@ int main() {
                 Nodo* novo = tree.buscar(tree.getRoot(), p);
                 Nodo* p2 = tree.getP(novo);
                 if (p2 != NULL) {
-                    cout << "Desbalanceou:";
-                    p2->getItem().imprimirResumido();
-                    cout << endl;
                     tree.executaBalanceamento(novo);
                 }
 
